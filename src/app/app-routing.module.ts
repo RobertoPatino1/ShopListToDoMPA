@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: "main", component: MainComponent },
   { path: "about", component: AboutComponent },
   { path: "report", component: ReportComponent },
-  { path: " ", redirectTo: '/main', pathMatch: 'full' },
+  { path: "", redirectTo: '/main', pathMatch: 'full' },
   { path: "**", redirectTo: "main" }
 ];
 

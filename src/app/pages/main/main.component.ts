@@ -8,7 +8,8 @@ import { GetUsersService } from 'src/app/providers/get-users.service';
 })
 export class MainComponent {
   public data:Usuario[] = [];
-  displayedColumns: string[] = ['<ATRIBUTO-1>','<ATRIBUTO-N>'];
+  displayedColumns: string[] = ['idUsuario','nombreUsuario','email','password'];
+  
   constructor(private dataProvider:GetUsersService){}
   ngOnInit() {
     this.dataProvider.getResponse().subscribe((response) => { 

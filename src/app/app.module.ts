@@ -16,6 +16,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import {MatTableModule} from '@angular/material/table';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,10 +10,10 @@ export class MainComponent {
   public data:Usuario[] = [];
   displayedColumns: string[] = ['idUsuario','nombreUsuario','email','password'];
   
-  constructor(private dataProvider:GetUsersService){}
-  ngOnInit() {
-    this.dataProvider.getResponse().subscribe((response) => { 
-      this.data = (response as Usuario[]); 
-    })
-  }
+  // constructor(private dataProvider:GetUsersService){}
+  // ngOnInit() {
+  //   this.dataProvider.getResponse().subscribe((response) => { 
+  //     this.data = (response as Usuario[]); 
+  //   })
+  // }
 }

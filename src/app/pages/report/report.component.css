@@ -1,0 +1,15 @@
+.select-label {
+  white-space: normal !important;
+}
+
+.container {
+  min-height: 91vh;
+  height: auto;
+  margin: 0;
+}
+
+.container {
+  padding-top: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}

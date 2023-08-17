@@ -4,11 +4,11 @@ import { MainComponent } from './pages/main/main.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ReportComponent } from './pages/report/report.component';
 const routes: Routes = [
-  { path: "main", component: MainComponent },
-  { path: "about", component: AboutComponent },
-  { path: "report", component: ReportComponent },
-  { path: "", redirectTo: '/main', pathMatch: 'full' },
-  { path: "**", redirectTo: "main" }
+  {path:'main',component:MainComponent},
+  {path:'report',component:ReportComponent},
+  {path:'about',component:AboutComponent},
+  {path:'',redirectTo:'/main',pathMatch:'full'},
+  {path:'**',redirectTo:'main'}
 ];
 
 @NgModule({

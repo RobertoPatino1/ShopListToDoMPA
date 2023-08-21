@@ -13,7 +13,7 @@ export class ReportComponent {
   public selectedUserId: number = -1;
   //Listas data
   public dataLista:Lista[] = []
-  displayedColumns: string[] = ['idLista','Usuario_idUsuario','nombreLista'];
+  displayedColumns: string[] = ['idLista','nombreLista'];
 
   constructor(private dataProvider:GetUsersService){}
   ngOnInit() {
@@ -27,6 +27,4 @@ export class ReportComponent {
       this.dataLista = (response as Lista[])
     })
   }
-
-
 }

@@ -20,6 +20,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 
 
+import {MatTreeModule} from '@angular/material/tree';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +44,11 @@ import {MatSelectModule} from '@angular/material/select';
     FlexLayoutModule,
     MatTableModule,
     MatSelectModule,
+    
+    MatTreeModule,
+    MatGridListModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

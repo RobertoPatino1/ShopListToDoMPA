@@ -1,5 +1,5 @@
 <div class="container" fxLayout="row" fxLayoutAlign="center start">
-  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" id="tableUs">
     <table mat-table [dataSource]="data" class="mat-elevation-z8">
       <!-- REPETIR POR CADA ATRIBUTO DE LA INTERFAZ - INICIO -->
       <ng-container matColumnDef="idUsuario">
@@ -21,7 +21,113 @@
       <!-- FIN -->
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
   </div>
 </div>
+
+<div class="container" fxLayout="row" >
+  <div fxFlex="48%" fxFlex.xs="80%" fxFlex.sm="33%" id="listado">
+    <!-- <app-data></app-data> -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Listado</mat-card-title>
+      </mat-card-header>
+
+      <ul class="list-group" id="challengesUL">
+        <li>Comprar vasos de 11 onz.</li>
+        <li>Platos para pastel</li>
+        <li>Paquete de 5 servilletas</li>
+        <li>Comprar 10 cajitas felices</li>
+        <li>Bebidas gaseosas light</li>
+        <li>Helado de vainilla</li>
+        <li>Helado de chocolate</li>
+      </ul>
+
+    </mat-card>
+
+  </div>
+
+
+    <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="33%">
+      <div class="tree-header">
+        <h2>Marcas Recomendadas y productos</h2>
+      </div>
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+
+        <!-- This is the tree node template for leaf nodes -->
+        <!-- There is inline padding applied to this node using styles.
+          This padding value depends on the mat-icon-button width. -->
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+            {{node.name}}
+        </mat-tree-node>
+        <!-- This is the tree node template for expandable nodes -->
+        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+            <div class="mat-tree-node">
+              <button mat-icon-button matTreeNodeToggle
+                      [attr.aria-label]="'Toggle ' + node.name">
+                <mat-icon class="mat-icon-rtl-mirror">
+                  {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                </mat-icon>
+              </button>
+              {{node.name}}
+            </div>
+            <!-- There is inline padding applied to this div using styles.
+                This padding value depends on the mat-icon-button width.  -->
+            <div [class.example-tree-invisible]="!treeControl.isExpanded(node)"
+                role="group">
+              <ng-container matTreeNodeOutlet></ng-container>
+          </div>
+        </mat-nested-tree-node>
+      </mat-tree>
+    </div>
+</div>
+
+<div class="container" fxLayout="row" fxLayoutAlign="center start">
+  <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="50%" id="tableUs">
+    <mat-card-title class="center-title"><h2>Comparador de precios segun supermercados</h2></mat-card-title> 
+    <mat-table [dataSource]="dataSourceSP" class="mat-elevation-z8">
+
+
+      <!-- Columnas de la tabla -->
+      <ng-container matColumnDef="producto">
+        <mat-header-cell *matHeaderCellDef>Producto</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.producto }}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="supermercadoA">
+        <mat-header-cell *matHeaderCellDef> TUTTI</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.supermercadoA }}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="supermercadoB">
+        <mat-header-cell *matHeaderCellDef>MI COMISARIATO</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.supermercadoB }}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="supermercadoC">
+        <mat-header-cell *matHeaderCellDef>MEGAMAXI</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.supermercadoC }}</mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumnsSP"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumnsSP"></mat-row>
+    </mat-table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

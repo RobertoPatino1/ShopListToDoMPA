@@ -3,3 +3,8 @@
   height: auto;
   margin: 0;
 }
+.toolbar-title {
+  font-size: 20px; /* Tamaño de fuente */
+  margin-left: 20px; /* Espacio entre el ícono y el título */
+  font-weight: bold; /* Peso de la fuente (opcional) */
+}

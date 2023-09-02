@@ -14,3 +14,40 @@ th {
   text-align: center !important;
   vertical-align: middle !important;
 }
+
+
+/* Estilo para centrar el nombre y redondear los bordes de las imágenes */
+.example-card {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.example-card img {
+
+  border-radius: 30%; /* Redondea los bordes de las imágenes */
+  margin-bottom: 10px ; /* Espacio entre la imagen y el nombre */
+
+  
+}
+
+
+.example-card p {
+  text-align: center; /* Centra el texto */
+  font-weight: bold; /* Resalta el texto */
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+.center-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+
+
+
+
+
